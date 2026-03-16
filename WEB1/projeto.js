@@ -1,38 +1,18 @@
 //notas por matéria
-let bloco_de_materias = [
-    [10,9,9],
-    [6,4,5],
-    [1,10,8],
-]
-let soma_total = 0
+let dias_prova = 3;
+let qntd_cap = 10;
 
-//tira as medias de cada materias(linha do array)
-for (let i=0;i<bloco_de_materias.length;i++){
-    let soma_materia = 0
-    let media_materia = 0
+let cap_p_dia = qntd_cap/dias_prova;
 
-    for (let j=0;j<bloco_de_materias[i].length;j++)
-        soma_materia +=bloco_de_materias[i][j]
-    media_materia = soma_materia / bloco_de_materias[i].length
-    media_materia = Math.round(media_materia * 100) / 100;
-    bloco_de_materias[i] = media_materia
-    soma_total += bloco_de_materias[i]
+if (cap_p_dia >=5){
+    console.log("Cronograma pesado! Tem que estudar ",cap_p_dia.toFixed(2)," capitulos por dia")
 }
-
-//media total do bloco
-let media_total = soma_total / bloco_de_materias.length
-media_total = Math.round(media_total*100)/100
-bloco_de_materias = media_total
-console.log('Nota: ',bloco_de_materias)
-
-//ve se passou ou nao
-if (bloco_de_materias>=6)
-    console.log('Aprovado!')
-else
-    console.log('Reprovado!')
-
-
-
+if (cap_p_dia <=2){
+    console.log("Cronograma leve! Tem que estudar ",cap_p_dia.toFixed(2)," capitulos por dia")
+}
+if (2<cap_p_dia && cap_p_dia<5 ){
+    console.log("Cronograma médio! Tem que estudar ",cap_p_dia.toFixed(2)," capitulos por dia")
+}
 
 
 
