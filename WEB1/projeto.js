@@ -1,4 +1,6 @@
 //notas por matéria
+//https://trello.com/b/Icu1eaQ9/trabalho-desenvolvimento-web
+
 let dias_prova = 3;
 let qntd_cap = 10;
 
